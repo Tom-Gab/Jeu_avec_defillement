@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/real fight signed.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 71, 6 )
+
+[node name="Platforme" type="KinematicBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.999969, 0 )
+scale = Vector2( 0.071875, 0.0111111 )
+texture = ExtResource( 1 )

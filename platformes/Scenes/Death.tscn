@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Death.gd" type="Script" id=1]
+[ext_resource path="res://Assets/dead.png" type="Texture" id=2]
+
+[node name="Death" type="TextureRect"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511, 301 )
+scale = Vector2( 3.40667, 3.58333 )
+texture = ExtResource( 2 )
+
+[node name="Restart" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 472.0
+margin_right = 254.0
+margin_bottom = 528.0
+text = "Restart"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 718.0
+margin_top = 472.0
+margin_right = 876.0
+margin_bottom = 528.0
+text = "Quit"
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
